@@ -5,4 +5,4 @@ class CreateFollows < ActiveRecord::Migration
       t.belongs_to  :follower   # we can't just duplicate line 4, but we need to specify that a row in this table belongs to *another* user, so we alias :user to :follower and tie this alias back to :user in the model
     end
   end
-end`
+end
