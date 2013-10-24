@@ -1,0 +1,16 @@
+<% @users.each do |user| %>
+  <h3>User: <%= user.name %></h3>
+  <h4>Users who follow <%= user.name %></h4>
+    <ul>
+      <% user.followers.each do |follower| %>
+        <li><%= follower.name %></li>
+      <% end %>
+    </ul>
+  <h4>Users <%= user.name %> follows</h4>
+    <ul>
+      <% user.followings.each do |following| %>
+        <li><%= following.name %></li>
+      <% end %>
+    </ul>
+  <hr>
+<% end %>

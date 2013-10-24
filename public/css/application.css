@@ -1,0 +1,24 @@
+.container {
+  margin: 20px auto;
+  width: 600px;
+  padding: 0px 20px 20px 20px;
+  border: 1px dotted black;
+}
+th {
+  text-align: left;
+}
+
+.header {
+	padding: 10px;
+	height: 30px;
+}
+
+.header h5 {
+	display: inline-block;
+	float:right;
+	margin: 0 10px;
+}
+
+.header h5.home {
+	float:left;
+}
