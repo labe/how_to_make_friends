@@ -15,4 +15,12 @@ class User < ActiveRecord::Base
             :source => :user,             # specify the source. there is no "following" model, but there is a "user" model, which is what we really mean
             :through => :is_followings,   # specify the join table which is aliased for this association
             :foreign_key => :user_id      # specify which column in this join table is to be used as the foreign key        
+
+
+  #alternatively, instead of creating an ActiveRecord association for user.is_followings, you can just hand-write the method:
+  def is_following
+    Follow.where(:follower_id => self.id).map do |follow|
+      User.find(follow.user_id)
+    end
+  end
 end
